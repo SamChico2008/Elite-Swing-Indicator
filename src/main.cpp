@@ -67,7 +67,7 @@ public:
     void updateState(PlayerObject* player, float dt) {
         if (!player) return;
 
-        m_drawNode::clear();
+        m_drawNode->clear();
         
         // Only show in Swing mode
         bool isSwing = player->m_isSwing;
@@ -79,7 +79,7 @@ public:
         this->setPosition({0, yPos});
         
         // elite vector arrow drawing
-        ccColor4F color = ccc4FFromccc3B(m_isSecondPlayer ? player->getColor2() : player->getColor1());
+        ccColor4F color = ccc4FFromccc3B(m_isSecondPlayer ? player->m_playerColor2 : player->m_playerColor1);
         color.a = 0.8f;
 
         CCPoint points[] = {
@@ -96,10 +96,12 @@ public:
 };
 
 class $modify(ElitePlayer, PlayerObject) {
-    EliteIndicatorNode* m_indicator = nullptr;
-    EliteIndicatorNode* m_indicator2 = nullptr;
+    struct Fields {
+        EliteIndicatorNode* m_indicator = nullptr;
+        EliteIndicatorNode* m_indicator2 = nullptr;
+    };
 
-    bool init(int p0, int p1, GJBaseGameLayer* p2, LayerLayer* p3, bool p4) {
+    bool init(int p0, int p1, GJBaseGameLayer* p2, CCLayer* p3, bool p4) {
         if (!PlayerObject::init(p0, p1, p2, p3, p4)) return false;
 
         m_fields->m_indicator = EliteIndicatorNode::create(false);
@@ -119,7 +121,7 @@ class $modify(ElitePlayer, PlayerObject) {
         }
         
         // Dual support check
-        bool isDual = this->m_isDualMode;
+        bool isDual = false;
         if (m_fields->m_indicator2) {
             m_fields->m_indicator2->setVisible(isDual);
             if (isDual) {
@@ -132,7 +134,7 @@ class $modify(ElitePlayer, PlayerObject) {
     void flipGravity(bool p0, bool p1) {
         PlayerObject::flipGravity(p0, p1);
         if (m_fields->m_indicator) {
-            m_fields->m_indicator->triggerFlipEffect(this->getColor1());
+            m_fields->m_indicator->triggerFlipEffect(this->m_playerColor1);
         }
     }
 };
