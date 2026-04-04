@@ -1,6 +1,6 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PlayerObject.hpp>
-#include <Geode/loader/SettingEvent.hpp>
+#include <Geode/loader/SettingV3.hpp>
 
 using namespace geode::prelude;
 
@@ -139,5 +139,4 @@ class $modify(ElitePlayer, PlayerObject) {
 
 // Listen for setting changes to keep the HUD reactive
 $execute {
-    static_cast<void>(Mod::get()->addCustomSetting<void>("show-arrow", [](auto){}));
 }
