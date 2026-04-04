@@ -1,0 +1,99 @@
+{
+    "geode": "5.5.3",
+    "gd": {
+        "win": "2.2081",
+        "mac": "2.2081",
+        "android": "2.2081"
+    },
+    "version": "1.0.0",
+    "id": "samchico.swing_arrow",
+    "name": "Elite Swing Indicator",
+    "developer": "SamChico",
+    "description": "Professional-grade gravity HUD for Swing Copter mode with vector-based drawing and event-driven updates.",
+    "dependencies": {
+        "geode.node-ids": ">=1.0.0"
+    },
+    "tags": [
+        "interface",
+        "gameplay",
+        "customization"
+    ],
+    "links": {
+        "community": "https://geode-sdk.org"
+    },
+    "resources": {
+        "files": [
+            "resources/pause_icon.png"
+        ]
+    },
+    "settings": {
+        "show-arrow": {
+            "type": "bool",
+            "name": "Display Arrow",
+            "description": "Toggle the gravity arrow visibility.",
+            "default": true
+        },
+        "arrow-style": {
+            "type": "string",
+            "name": "Aesthetic Style",
+            "description": "Select the visual theme for the indicator.",
+            "default": "Elite",
+            "one-of": [
+                "Elite",
+                "Classic",
+                "Minimalist",
+                "Custom"
+            ]
+        },
+        "custom-path": {
+            "type": "file",
+            "name": "Custom Asset",
+            "description": "Path to a custom .png sprite file.",
+            "default": "",
+            "control": {
+                "filters": [
+                    {
+                        "name": "Images",
+                        "extensions": ["png"]
+                    }
+                ]
+            }
+        },
+        "arrow-scale": {
+            "type": "float",
+            "name": "Scale Factor",
+            "description": "Geometric scale of the indicator.",
+            "default": 0.6,
+            "control": {
+                "slider": true,
+                "range": [0.1, 2.0]
+            }
+        },
+        "v-offset": {
+            "type": "float",
+            "name": "Vertical Displacement",
+            "description": "Relative vertical distance from the center.",
+            "default": 20.0,
+            "control": {
+                "slider": true,
+                "range": [0, 80]
+            }
+        },
+        "h-tracker": {
+            "type": "bool",
+            "name": "Velocity Tracker",
+            "description": "Enable a reactive vector-based velocity bar.",
+            "default": true
+        },
+        "hud-scale": {
+            "type": "float",
+            "name": "HUD Scaling",
+            "description": "Global scale for the velocity tracker.",
+            "default": 1.0,
+            "control": {
+                "slider": true,
+                "range": [0.1, 2.0]
+            }
+        }
+    }
+}
