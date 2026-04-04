@@ -1,11 +1,11 @@
 {
-    "geode": "v5.5.3",
+    "geode": "5.5.3",
     "gd": {
         "win": "2.2081",
         "mac": "2.2081",
         "android": "2.2081"
     },
-    "version": "1.1.5",
+    "version": "1.1.6",
     "id": "samchico.swing_arrow",
     "name": "Elite Swing Indicator",
     "developer": "SamChico",
