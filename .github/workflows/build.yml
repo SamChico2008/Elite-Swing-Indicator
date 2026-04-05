@@ -29,10 +29,10 @@ jobs:
     runs-on: ${{ matrix.config.os }}
 
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+      - uses: actions/checkout@v4
 
       - name: Build Geode Mod
-        uses: geode-sdk/build-geode-mod@825dce8c7404aacc975db01b09c99d295680cdec # v2.3.0 (Fixed SHA)
+        uses: geode-sdk/build-geode-mod@main
         with:
           combine: true
           target: ${{ matrix.config.target }}
@@ -42,8 +42,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: ['build']
     steps:
-      - uses: geode-sdk/build-geode-mod/combine@825dce8c7404aacc975db01b09c99d295680cdec
-      - uses: actions/upload-artifact@0b2256b8c012f0828dc542b3febcab082c67f72b # v4.3.4
+      - uses: geode-sdk/build-geode-mod/combine@main
+      - uses: actions/upload-artifact@v4
         with:
           name: Build Output
           path: out
