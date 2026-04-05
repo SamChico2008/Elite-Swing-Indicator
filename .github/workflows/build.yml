@@ -6,6 +6,11 @@ on:
     branches:
       - main
 
+env:
+  # The "Zero Warning" Holy Grail for 2026
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  ACTIONS_RUNNER_ALLOW_ACTIONS_USE_FORCED_NODE_VERSION_UPGRADE_SILENT: true
+
 jobs:
   build:
     strategy:
@@ -19,17 +24,17 @@ jobs:
           os: macos-latest
           target: MacOS
         - name: Android32
-          os: ubuntu-latest
+          os: ubuntu-22.04
           target: Android32
         - name: Android64
-          os: ubuntu-latest
+          os: ubuntu-22.04
           target: Android64
 
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Build Geode Mod
         uses: geode-sdk/build-geode-mod@main
@@ -39,11 +44,11 @@ jobs:
 
   package:
     name: Package builds
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: ['build']
     steps:
       - uses: geode-sdk/build-geode-mod/combine@main
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: Build Output
           path: out
