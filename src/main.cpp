@@ -3,6 +3,8 @@
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/loader/Event.hpp>
 #include <Geode/loader/SettingV3.hpp>
+#include <Geode/loader/Setting.hpp>
+
 #include <vector>
 #include <cmath>
 
