@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/asp2-populate"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/750e5ff0db4a4530f6db55d04f851a74/asp2-populate.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/0671aba32494312e7b9299c58d51d7e5/asp2-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/f5d5ce3536115c16213f221c4b16872a/asp2-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/f5d5ce3536115c16213f221c4b16872a/asp2-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/f5d5ce3536115c16213f221c4b16872a/asp2-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/f5d5ce3536115c16213f221c4b16872a/asp2-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/f5d5ce3536115c16213f221c4b16872a/asp2-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/f5d5ce3536115c16213f221c4b16872a/asp2-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/f5d5ce3536115c16213f221c4b16872a/asp2-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/f5d5ce3536115c16213f221c4b16872a/asp2-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"asp2-populate"
+		],
+		"name" : "asp2-populate"
+	}
+}

@@ -154,10 +154,10 @@ class $modify(ElitePlayer, PlayerObject) {
 
 
 $execute {
-        new geode::EventListener<geode::SettingChangedFilter>(+[](geode::SettingChangedEvent* event) {
-        auto pl = geode::PlayLayer::get();
+    static auto listener = new geode::EventListener<geode::SettingChangedFilter>(+[](geode::SettingChangedEvent* event) {
+        auto pl = PlayLayer::get();
         if (!pl) return geode::ListenerResult::Propagate;
-
+        
         if (pl->m_player1) {
             if (auto fields = static_cast<ElitePlayer*>(pl->m_player1)->m_fields.operator->()) {
                 if (fields->m_indicator) fields->m_indicator->updateSettings();
@@ -169,5 +169,5 @@ $execute {
             }
         }
         return geode::ListenerResult::Propagate;
-        }, geode::SettingChangedFilter(geode::Mod::get()->getID()));
+    }, geode::SettingChangedFilter(geode::Mod::get()->getID()));
 }

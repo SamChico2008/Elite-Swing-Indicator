@@ -1,0 +1,150 @@
+^C:\USERS\SAMCHICOPC\DOCUMENTS\GD MOD SWING\BUILD\_DEPS\TULIPHOOK-SUBBUILD\CMAKEFILES\CCAA47508056AD255C6A045933190800\TULIPHOOK-POPULATE-MKDIR.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/tuliphook-populate-prefix/tmp/tuliphook-populate-mkdirs.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/tuliphook-populate-prefix/src/tuliphook-populate-stamp/Debug/tuliphook-populate-mkdir"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SAMCHICOPC\DOCUMENTS\GD MOD SWING\BUILD\_DEPS\TULIPHOOK-SUBBUILD\CMAKEFILES\CCAA47508056AD255C6A045933190800\TULIPHOOK-POPULATE-DOWNLOAD.RULE
+setlocal
+cd "C:\Users\SamChicoPC\Documents\GD MOD SWING\build\_deps"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/tuliphook-populate-prefix/tmp/tuliphook-populate-gitclone.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/tuliphook-populate-prefix/src/tuliphook-populate-stamp/Debug/tuliphook-populate-download"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SAMCHICOPC\DOCUMENTS\GD MOD SWING\BUILD\_DEPS\TULIPHOOK-SUBBUILD\CMAKEFILES\CCAA47508056AD255C6A045933190800\TULIPHOOK-POPULATE-UPDATE.RULE
+setlocal
+cd "C:\Users\SamChicoPC\Documents\GD MOD SWING\build\_deps\tuliphook-src"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/tuliphook-populate-prefix/tmp/tuliphook-populate-gitupdate.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SAMCHICOPC\DOCUMENTS\GD MOD SWING\BUILD\_DEPS\TULIPHOOK-SUBBUILD\CMAKEFILES\CCAA47508056AD255C6A045933190800\TULIPHOOK-POPULATE-PATCH.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/tuliphook-populate-prefix/src/tuliphook-populate-stamp/Debug/tuliphook-populate-patch"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SAMCHICOPC\DOCUMENTS\GD MOD SWING\BUILD\_DEPS\TULIPHOOK-SUBBUILD\CMAKEFILES\CCAA47508056AD255C6A045933190800\TULIPHOOK-POPULATE-CONFIGURE.RULE
+setlocal
+cd "C:\Users\SamChicoPC\Documents\GD MOD SWING\build\_deps\tuliphook-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/tuliphook-populate-prefix/src/tuliphook-populate-stamp/Debug/tuliphook-populate-configure"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SAMCHICOPC\DOCUMENTS\GD MOD SWING\BUILD\_DEPS\TULIPHOOK-SUBBUILD\CMAKEFILES\CCAA47508056AD255C6A045933190800\TULIPHOOK-POPULATE-BUILD.RULE
+setlocal
+cd "C:\Users\SamChicoPC\Documents\GD MOD SWING\build\_deps\tuliphook-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/tuliphook-populate-prefix/src/tuliphook-populate-stamp/Debug/tuliphook-populate-build"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SAMCHICOPC\DOCUMENTS\GD MOD SWING\BUILD\_DEPS\TULIPHOOK-SUBBUILD\CMAKEFILES\CCAA47508056AD255C6A045933190800\TULIPHOOK-POPULATE-INSTALL.RULE
+setlocal
+cd "C:\Users\SamChicoPC\Documents\GD MOD SWING\build\_deps\tuliphook-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/tuliphook-populate-prefix/src/tuliphook-populate-stamp/Debug/tuliphook-populate-install"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SAMCHICOPC\DOCUMENTS\GD MOD SWING\BUILD\_DEPS\TULIPHOOK-SUBBUILD\CMAKEFILES\CCAA47508056AD255C6A045933190800\TULIPHOOK-POPULATE-TEST.RULE
+setlocal
+cd "C:\Users\SamChicoPC\Documents\GD MOD SWING\build\_deps\tuliphook-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/tuliphook-populate-prefix/src/tuliphook-populate-stamp/Debug/tuliphook-populate-test"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SAMCHICOPC\DOCUMENTS\GD MOD SWING\BUILD\_DEPS\TULIPHOOK-SUBBUILD\CMAKEFILES\1501A37B75C7206FED42702F3B500A7D\TULIPHOOK-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/CMakeFiles/Debug"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/CMakeFiles/Debug/tuliphook-populate-complete"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/tuliphook-populate-prefix/src/tuliphook-populate-stamp/Debug/tuliphook-populate-done"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SAMCHICOPC\DOCUMENTS\GD MOD SWING\BUILD\_DEPS\TULIPHOOK-SUBBUILD\CMAKEFILES\5B5EB8DB330135B6A4DDD778163B3C8B\TULIPHOOK-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SAMCHICOPC\DOCUMENTS\GD MOD SWING\BUILD\_DEPS\TULIPHOOK-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild" "-BC:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild" --check-stamp-file "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/arc-populate"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/5efd781545fd7b286fe9707defc88f5e/arc-populate.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/fb925967cc4018976a97ded5467b1a4f/arc-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/a733eb065e44e0f2a7b0ce687299f1ec/arc-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/a733eb065e44e0f2a7b0ce687299f1ec/arc-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/a733eb065e44e0f2a7b0ce687299f1ec/arc-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/a733eb065e44e0f2a7b0ce687299f1ec/arc-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/a733eb065e44e0f2a7b0ce687299f1ec/arc-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/a733eb065e44e0f2a7b0ce687299f1ec/arc-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/a733eb065e44e0f2a7b0ce687299f1ec/arc-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/a733eb065e44e0f2a7b0ce687299f1ec/arc-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"arc-populate"
+		],
+		"name" : "arc-populate"
+	}
+}

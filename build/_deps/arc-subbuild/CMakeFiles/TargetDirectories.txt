@@ -1,0 +1,3 @@
+C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/arc-populate.dir
+C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/arc-subbuild/CMakeFiles/ZERO_CHECK.dir

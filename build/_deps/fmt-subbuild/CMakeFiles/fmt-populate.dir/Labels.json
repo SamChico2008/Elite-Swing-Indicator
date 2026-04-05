@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/fmt-subbuild/CMakeFiles/fmt-populate"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/fmt-subbuild/CMakeFiles/565e0dce34c02259b0fc7dce22e62da3/fmt-populate.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/fmt-subbuild/CMakeFiles/bc871d9ec57539a8a486e54e2d42625b/fmt-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/fmt-subbuild/CMakeFiles/65b21526322cfe0db7f04236bec8b6e3/fmt-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/fmt-subbuild/CMakeFiles/65b21526322cfe0db7f04236bec8b6e3/fmt-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/fmt-subbuild/CMakeFiles/65b21526322cfe0db7f04236bec8b6e3/fmt-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/fmt-subbuild/CMakeFiles/65b21526322cfe0db7f04236bec8b6e3/fmt-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/fmt-subbuild/CMakeFiles/65b21526322cfe0db7f04236bec8b6e3/fmt-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/fmt-subbuild/CMakeFiles/65b21526322cfe0db7f04236bec8b6e3/fmt-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/fmt-subbuild/CMakeFiles/65b21526322cfe0db7f04236bec8b6e3/fmt-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/fmt-subbuild/CMakeFiles/65b21526322cfe0db7f04236bec8b6e3/fmt-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"fmt-populate"
+		],
+		"name" : "fmt-populate"
+	}
+}

@@ -1,0 +1,3 @@
+C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/asp2-populate.dir
+C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/asp2-subbuild/CMakeFiles/ZERO_CHECK.dir

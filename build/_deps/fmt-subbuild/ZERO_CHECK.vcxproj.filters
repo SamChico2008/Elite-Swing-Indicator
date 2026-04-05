@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\SamChicoPC\Documents\GD MOD SWING\build\_deps\fmt-subbuild\CMakeFiles\565e0dce34c02259b0fc7dce22e62da3\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6B1A6DE9-04F0-3624-B3C8-52D103155C01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
