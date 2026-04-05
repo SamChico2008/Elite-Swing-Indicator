@@ -161,14 +161,12 @@ $execute {
         if (!pl) return geode::ListenerResult::Propagate;
         
         if (pl->m_player1) {
-            if (auto fields = static_cast<ElitePlayer*>(pl->m_player1)->m_fields.operator->()) {
-                if (fields->m_indicator) fields->m_indicator->updateSettings();
-            }
+            auto player1 = static_cast<ElitePlayer*>(pl->m_player1);
+            if (player1->m_fields->m_indicator) player1->m_fields->m_indicator->updateSettings();
         }
         if (pl->m_player2) {
-            if (auto fields = static_cast<ElitePlayer*>(pl->m_player2)->m_fields.operator->()) {
-                if (fields->m_indicator) fields->m_indicator->updateSettings();
-            }
+            auto player2 = static_cast<ElitePlayer*>(pl->m_player2);
+            if (player2->m_fields->m_indicator) player2->m_fields->m_indicator->updateSettings();
         }
         return geode::ListenerResult::Propagate;
     }, geode::SettingChangedFilter(geode::Mod::get()->getID()));

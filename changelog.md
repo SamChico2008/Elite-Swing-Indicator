@@ -8,5 +8,10 @@
 - **New Visual Identity**: Replaced generic assets with custom, premium logos and icons.
 - **Settings Refinement**: Added controls for scale, displacement, and tracker toggles.
 
-## v1.0.0
-- Initial internal development release.
+## v1.0.0 (Elite Release)
+- **Initial Stable Release**: Finalized Elite Swing Indicator for Geometry Dash 2.2.
+- **Elite Vector HUD**: High-performance vector rendering for gravity indicators.
+- **Dual Support**: Independent indicators for both players in Dual mode.
+- **Visual Effects**: Added gravity-flip shockwaves and velocity tracking bars.
+- **Stability Fix**: Resolved critical null-pointer crashes during level exit/entry.
+- **Build Optimized**: Modernized CMake build system with local environment fail-safes.
