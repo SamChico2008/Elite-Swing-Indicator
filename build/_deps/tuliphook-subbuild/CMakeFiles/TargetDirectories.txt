@@ -1,3 +1,0 @@
-C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/CMakeFiles/tuliphook-populate.dir
-C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/CMakeFiles/ALL_BUILD.dir
-C:/Users/SamChicoPC/Documents/GD MOD SWING/build/_deps/tuliphook-subbuild/CMakeFiles/ZERO_CHECK.dir
