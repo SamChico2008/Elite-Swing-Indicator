@@ -150,27 +150,22 @@ class $modify(ElitePlayer, PlayerObject) {
     }
 };
 
+
 $execute {
-    static auto listener = new EventListener<SettingChangedFilter>(+[](SettingChangedEvent* event) {
-        auto pl = PlayLayer::get();
-        if (!pl) return ListenerResult::Propagate;
-        
+        new geode::EventListener<geode::SettingChangedFilter>(+[](geode::SettingChangedEvent* event) {
+        auto pl = geode::PlayLayer::get();
+        if (!pl) return geode::ListenerResult::Propagate;
+
         if (pl->m_player1) {
-            if (auto field = static_cast<ElitePlayer*>(pl->m_player1)->m_fields.operator->()) {
-                if (field->m_indicator) field->m_indicator->updateSettings();
+            if (auto fields = static_cast<ElitePlayer*>(pl->m_player1)->m_fields.operator->()) {
+                if (fields->m_indicator) fields->m_indicator->updateSettings();
             }
         }
         if (pl->m_player2) {
-            if (auto field = static_cast<ElitePlayer*>(pl->m_player2)->m_fields.operator->()) {
-                if (field->m_indicator) field->m_indicator->updateSettings();
+            if (auto fields = static_cast<ElitePlayer*>(pl->m_player2)->m_fields.operator->()) {
+                if (fields->m_indicator) fields->m_indicator->updateSettings();
             }
         }
-        return ListenerResult::Propagate;
-    }, SettingChangedFilter(Mod::get()->getID()));
+        return geode::ListenerResult::Propagate;
+        }, geode::SettingChangedFilter(geode::Mod::get()->getID()));
 }
-
-
-
-
-
-
