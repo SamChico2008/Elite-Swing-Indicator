@@ -1,21 +1,22 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PlayerObject.hpp>
 #include <Geode/modify/PlayLayer.hpp>
+#include <Geode/loader/Event.hpp>
+#include <Geode/loader/SettingEvent.hpp>
 #include <vector>
 #include <cmath>
 
 using namespace geode::prelude;
-using namespace cocos2d;
 
 /**
  * EliteIndicatorNode: A custom CCNode for high-performance vector rendering.
  * Features: Layered vector arrow, expanding shockwave on gravity flip,
  * and per-player color matching.
  */
-class EliteIndicatorNode : public CCNode {
+class EliteIndicatorNode : public cocos2d::CCNode {
 protected:
-    CCDrawNode* m_drawNode = nullptr;
-    CCDrawNode* m_shockwave = nullptr;
+    cocos2d::CCDrawNode* m_drawNode = nullptr;
+    cocos2d::CCDrawNode* m_shockwave = nullptr;
     
     float m_baseScale = 0.6f;
     float m_vOffset = 20.0f;
@@ -27,11 +28,11 @@ protected:
     bool m_swActive = false;
 
     bool init(bool isSecondPlayer) {
-        if (!CCNode::init()) return false;
+        if (!cocos2d::CCNode::init()) return false;
         
         m_isSecondPlayer = isSecondPlayer;
-        m_drawNode = CCDrawNode::create();
-        m_shockwave = CCDrawNode::create();
+        m_drawNode = cocos2d::CCDrawNode::create();
+        m_shockwave = cocos2d::CCDrawNode::create();
         
         if (m_drawNode) this->addChild(m_drawNode);
         if (m_shockwave) this->addChild(m_shockwave);
@@ -74,9 +75,9 @@ public:
             if (m_swOpacity <= 0) {
                 m_swActive = false;
             } else {
-                ccColor4F swColor = {1.0f, 1.0f, 1.0f, m_swOpacity * 0.4f};
+                cocos2d::ccColor4F swColor = {1.0f, 1.0f, 1.0f, m_swOpacity * 0.4f};
                 const int segments = 32;
-                std::vector<CCPoint> points;
+                std::vector<cocos2d::CCPoint> points;
                 for (int i = 0; i < segments; i++) {
                     float angle = 6.28318f * i / segments;
                     points.push_back(ccp(cosf(angle) * m_swRadius, sinf(angle) * m_swRadius));
@@ -97,19 +98,19 @@ public:
         float yPos = player->m_isUpsideDown ? -m_vOffset : m_vOffset;
         this->setPosition(ccp(0, yPos));
         
-        ccColor3B pColor = m_isSecondPlayer ? player->m_playerColor2 : player->m_playerColor1;
-        ccColor4F colorMain = ccc4FFromccc3B(pColor);
-        ccColor4F colorGlow = colorMain;
+        cocos2d::ccColor3B pColor = m_isSecondPlayer ? player->m_playerColor2 : player->m_playerColor1;
+        cocos2d::ccColor4F colorMain = ccc4FFromccc3B(pColor);
+        cocos2d::ccColor4F colorGlow = colorMain;
         colorGlow.a = 0.3f;
         
         float direction = player->m_isUpsideDown ? -1.0f : 1.0f;
 
-        CCPoint pointsOuter[] = {
+        cocos2d::CCPoint pointsOuter[] = {
             ccp(-14, 0), ccp(14, 0), ccp(0, 20 * direction)
         };
         m_drawNode->drawPolygon(pointsOuter, 3, colorGlow, 0.5f, colorGlow);
 
-        CCPoint pointsInner[] = {
+        cocos2d::CCPoint pointsInner[] = {
             ccp(-9, 0), ccp(9, 0), ccp(0, 13 * direction)
         };
         m_drawNode->drawPolygon(pointsInner, 3, colorMain, 1.0f, colorMain);
@@ -149,9 +150,9 @@ class $modify(ElitePlayer, PlayerObject) {
 };
 
 $execute {
-    new geode::EventListener<geode::SettingChangedFilter>(+[](geode::SettingChangedEvent* event) {
+    static auto listener = new EventListener<SettingChangedFilter>(+[](SettingChangedEvent* event) {
         auto pl = PlayLayer::get();
-        if (!pl) return;
+        if (!pl) return ListenerResult::Propagate;
         
         if (pl->m_player1) {
             if (auto field = static_cast<ElitePlayer*>(pl->m_player1)->m_fields.operator->()) {
@@ -163,8 +164,10 @@ $execute {
                 if (field->m_indicator) field->m_indicator->updateSettings();
             }
         }
-    });
+        return ListenerResult::Propagate;
+    }, SettingChangedFilter(Mod::get()->getID()));
 }
+
 
 
 
