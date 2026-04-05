@@ -129,10 +129,16 @@ class $modify(ElitePlayer, PlayerObject) {
     void update(float dt) {
         PlayerObject::update(dt);
         
+        // Safety: Only proceed if we are in a PlayLayer (game level)
+        auto pl = PlayLayer::get();
+        if (!pl) return;
+
         if (!m_fields->m_indicator) {
-            bool isSecondPlayer = (this == PlayLayer::get()->m_player2);
+            bool isSecondPlayer = (this == pl->m_player2);
             m_fields->m_indicator = EliteIndicatorNode::create(isSecondPlayer);
-            this->addChild(m_fields->m_indicator);
+            if (m_fields->m_indicator) {
+                this->addChild(m_fields->m_indicator);
+            }
         }
         
         if (m_fields->m_indicator) {
