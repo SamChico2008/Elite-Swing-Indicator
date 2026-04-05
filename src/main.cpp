@@ -7,6 +7,7 @@
 #include <cmath>
 
 using namespace geode::prelude;
+using namespace geode;
 
 /**
  * EliteIndicatorNode: A custom CCNode for high-performance vector rendering.
