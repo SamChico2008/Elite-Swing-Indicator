@@ -1,7 +1,7 @@
 name: Build Geode Mod
 
 env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 on:
   workflow_dispatch:
@@ -32,7 +32,7 @@ jobs:
     runs-on: ${{ matrix.config.os }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.1.7
 
       - name: Build Geode Mod
         uses: geode-sdk/build-geode-mod@main
@@ -46,9 +46,7 @@ jobs:
     needs: ['build']
     steps:
       - uses: geode-sdk/build-geode-mod/combine@main
-        id: build
-
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4.3.3
         with:
           name: Build Output
-          path: ${{ steps.build.outputs.build-output }}
+          path: out
