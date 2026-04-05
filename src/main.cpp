@@ -2,6 +2,7 @@
 #include <Geode/modify/PlayerObject.hpp>
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/loader/Event.hpp>
+#include <Geode/loader/SettingEvent.hpp>
 #include <Geode/loader/SettingV3.hpp>
 #include <vector>
 #include <cmath>
@@ -167,6 +168,7 @@ $execute {
         return ListenerResult::Propagate;
     }, SettingChangedFilter(Mod::get()->getID()));
 }
+
 
 
 
