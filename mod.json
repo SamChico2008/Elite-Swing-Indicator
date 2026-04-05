@@ -1,63 +1,50 @@
 {
-    "geode": "v2.0.0",
-    "gd": {
-        "win": "2.2081",
-        "mac": "2.2081",
-        "android": "2.2081"
-    },
-    "version": "1.0.0",
-    "id": "samchico.swing_arrow",
-    "name": "Elite Swing Indicator",
-    "developer": "SamChico",
-    "description": "Premium, professional-grade gravity HUD for Swing Copter mode. Features Elite vector rendering, Dual Player support, and dynamic flip shockwave effects.",
-    "dependencies": {
-        "geode.node-ids": ">=1.0.0"
-    },
-    "tags": [
-        "interface",
-        "gameplay",
-        "customization"
-    ],
-    "links": {
-        "community": "https://geode-sdk.org"
-    },
-    "resources": {
-        "files": [
-            "resources/pause_icon.png"
-        ]
-    },
-    "settings": {
-        "show-arrow": {
-            "type": "bool",
-            "name": "Display Indicator",
-            "description": "Toggle the gravity indicators visibility.",
-            "default": true
+    {
+    "geode": "5.5.3",
+        "gd": {
+                    "win": "2.2081",
+                    "mac": "2.2081",
+                    "android": "2.2081"
         },
-        "v-offset": {
-            "type": "float",
-            "name": "Vertical Displacement",
-            "description": "Distance from the player center.",
-            "default": 20.0,
-            "control": {
-                "slider": true,
-                "range": [0, 80]
-            }
+        "version": "1.15.0",
+        "id": "samchico.swing_arrow",
+        "name": "Elite Swing Indicator",
+        "developer": "SamChico",
+        "description": "Premium, professional-grade gravity HUD for Swing Copter mode. Features Elite vector rendering, Dual Player support, and dynamic flip shockwave effects.",
+        "dependencies": {
+                    "geode.node-ids": ">=1.0.0"
         },
-        "arrow-scale": {
-            "type": "float",
-            "name": "Indicator Scale",
-            "description": "Size of the vector HUD elements.",
-            "default": 0.6,
-            "control": {
-                "slider": true,
-                "range": [0.1, 2.0]
-            }
+        "tags": [
+                    "interface",
+                    "gameplay",
+                    "customization"
+        ],
+        "links": {
+                    "community": "https://geode-sdk.org"
         },
-        "h-tracker": {
-            "type": "bool",
-            "name": "Velocity Tracker",
-            "description": "Enable a reactive vector-based vertical velocity bar.",
-            "default": true
+        "resources": {
+                    "files": [
+                                    "resources/pause_icon.png"
+                    ]
+        },
+        "settings": {
+                    "show-arrow": {
+                                    "type": "bool",
+                                    "name": "Display Indicator",
+                                    "description": "Toggle the gravity indicators visibility.",
+                                    "default": true
+                    },
+                    "v-offset": {
+                                    "type": "float",
+                                    "name": "Vertical Displacement",
+                                    "description": "Adjust the vertical position of the indicator.",
+                                    "default": 35.0,
+                                    "min": -100.0,
+                                    "max": 100.0,
+                                    "control": {
+                                                        "slider": true
+                                    }
+                    }
         }
-    }
+}
 }
