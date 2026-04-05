@@ -12,6 +12,13 @@ project(EliteSwingIndicator VERSION 1.0.0)
 
 find_package(Geode REQUIRED)
 
+# Fail-safe: If Geode CLI is missing locally, disable CLI calls to prevent configuration errors.
+find_program(GEODE_CLI NAMES geode.exe geode-cli.exe geode geode-cli)
+if (NOT GEODE_CLI)
+    message(WARNING "Geode CLI not found locally. CLI calls (packaging) will be disabled for this build.")
+    set(GEODE_DISABLE_CLI_CALLS ON)
+endif()
+
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
