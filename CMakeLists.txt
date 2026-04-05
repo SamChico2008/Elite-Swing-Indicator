@@ -1,14 +1,13 @@
 cmake_minimum_required(VERSION 3.21)
+
+# REINFORCED FAIL-SAFE:
+# If you don't have the Geode CLI, this forces CMake to ignore it and continue 
+# with configuration so you can use IntelliSense and develop locally.
+set(GEODE_CLI "disabled" CACHE STRING "Forced Geode CLI path" FORCE)
+set(GEODE_DISABLE_CLI_CALLS ON CACHE BOOL "Forced Disable Geode CLI" FORCE)
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# Fail-safe: If Geode CLI is missing locally, disable CLI calls as a CACHE variable 
-# to prevent fatal configuration errors in VS Code.
-find_program(GEODE_CLI NAMES geode.exe geode-cli.exe geode geode-cli)
-if (NOT GEODE_CLI)
-    message(WARNING "Geode CLI not found locally. Disabling CLI calls to permit local development.")
-    set(GEODE_DISABLE_CLI_CALLS ON CACHE BOOL "Disable Geode CLI calls" FORCE)
-endif()
 
 if ("${CMAKE_SYSTEM_NAME}" STREQUAL "iOS" OR IOS)
     set(CMAKE_OSX_ARCHITECTURES "arm64")
