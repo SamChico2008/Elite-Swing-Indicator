@@ -2,14 +2,7 @@
 #include <Geode/modify/PlayerObject.hpp>
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/loader/Event.hpp>
-#include <Geode/loader/SettingV3.hpp>
-#include <Geode/loader/Setting.hpp>
-
-#include <vector>
-#include <cmath>
-
 using namespace geode::prelude;
-using namespace geode;
 
 /**
  * EliteIndicatorNode: A custom CCNode for high-performance vector rendering.
@@ -154,7 +147,7 @@ class $modify(ElitePlayer, PlayerObject) {
 
 
 $execute {
-    static auto listener = new geode::EventListener<geode::SettingChangedFilter>(+[](geode::SettingChangedEvent* event) {
+    [[maybe_unused]] static auto listener = new geode::EventListener<geode::SettingChangedFilter>(+[](geode::SettingChangedEvent* event) {
         auto pl = PlayLayer::get();
         if (!pl) return geode::ListenerResult::Propagate;
         
