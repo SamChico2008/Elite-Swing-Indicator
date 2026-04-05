@@ -1,10 +1,12 @@
 cmake_minimum_required(VERSION 3.21)
 
-# REINFORCED FAIL-SAFE:
-# If you don't have the Geode CLI, this forces CMake to ignore it and continue 
-# with configuration so you can use IntelliSense and develop locally.
-set(GEODE_CLI "disabled" CACHE STRING "Forced Geode CLI path" FORCE)
-set(GEODE_DISABLE_CLI_CALLS ON CACHE BOOL "Forced Disable Geode CLI" FORCE)
+# REINFORCED FAIL-SAFE (Local-only):
+# If you don't have the Geode CLI locally, this forces CMake to ignore it.
+# We ensure this is NOT active on GitHub so the official build still works.
+if (NOT DEFINED ENV{GITHUB_ACTIONS})
+    set(GEODE_CLI "disabled" CACHE STRING "Forced Geode CLI path" FORCE)
+    set(GEODE_DISABLE_CLI_CALLS ON CACHE BOOL "Forced Disable Geode CLI" FORCE)
+endif()
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
