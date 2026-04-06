@@ -1,13 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
 
-# REINFORCED FAIL-SAFE (Local-only):
-# If you don't have the Geode CLI locally, this forces CMake to ignore it.
-# We ensure this is NOT active on GitHub so the official build still works.
-if (NOT DEFINED ENV{GITHUB_ACTIONS})
-    set(GEODE_CLI "disabled" CACHE STRING "Forced Geode CLI path" FORCE)
-    set(GEODE_DISABLE_CLI_CALLS ON CACHE BOOL "Forced Disable Geode CLI" FORCE)
-endif()
-
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -18,7 +10,12 @@ else()
 endif()
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
-project(EliteSwingIndicator VERSION 1.0.0)
+# Allow CMake to find Geode SDK in CI/CD environments
+if (DEFINED ENV{GEODE_SDK})
+    list(APPEND CMAKE_MODULE_PATH "$ENV{GEODE_SDK}/cmake")
+endif()
+
+project(EliteSwingIndicator VERSION 1.2.0)
 
 find_package(Geode REQUIRED)
 

@@ -97,8 +97,8 @@ public:
         float yPos = player->m_isUpsideDown ? -m_vOffset : m_vOffset;
         this->setPosition(ccp(0, yPos));
         
-        cocos2d::ccColor3B pColor = m_isSecondPlayer ? player->m_playerColor2 : player->m_playerColor1;
-        cocos2d::ccColor4F colorMain = ccc4FFromccc3B(pColor);
+        cocos2d::ccColor3B pColor = m_isSecondPlayer ? player->getColor2() : player->getColor1();
+        cocos2d::ccColor4F colorMain = cocos2d::ccc4FFromccc3B(pColor);
         cocos2d::ccColor4F colorGlow = colorMain;
         colorGlow.a = 0.3f;
         
@@ -152,22 +152,26 @@ class $modify(ElitePlayer, PlayerObject) {
             m_fields->m_indicator->triggerFlipEffect();
         }
     }
+
+    static void updateAllSettings() {
+        auto pl = PlayLayer::get();
+        if (!pl) return;
+        
+        if (pl->m_player1) {
+            auto player1 = static_cast<ElitePlayer*>(static_cast<PlayerObject*>(pl->m_player1));
+            if (player1->m_fields->m_indicator) player1->m_fields->m_indicator->updateSettings();
+        }
+        if (pl->m_player2) {
+            auto player2 = static_cast<ElitePlayer*>(static_cast<PlayerObject*>(pl->m_player2));
+            if (player2->m_fields->m_indicator) player2->m_fields->m_indicator->updateSettings();
+        }
+    }
 };
 
 
 $execute {
     [[maybe_unused]] static auto listener = new geode::EventListener<geode::SettingChangedFilter>(+[](geode::SettingChangedEvent* event) {
-        auto pl = PlayLayer::get();
-        if (!pl) return geode::ListenerResult::Propagate;
-        
-        if (pl->m_player1) {
-            auto player1 = static_cast<ElitePlayer*>(pl->m_player1);
-            if (player1->m_fields->m_indicator) player1->m_fields->m_indicator->updateSettings();
-        }
-        if (pl->m_player2) {
-            auto player2 = static_cast<ElitePlayer*>(pl->m_player2);
-            if (player2->m_fields->m_indicator) player2->m_fields->m_indicator->updateSettings();
-        }
+        ElitePlayer::updateAllSettings();
         return geode::ListenerResult::Propagate;
     }, geode::SettingChangedFilter(geode::Mod::get()->getID()));
 }

@@ -1,12 +1,10 @@
 # Changelog for Elite Swing Indicator
 
-## v1.1.0 (Elite HUD Rebirth)
-- **Total Rewrite**: Transitioned to the `EliteIndicatorNode` architecture for superior performance.
-- **Dual Support**: Fully integrated support for both players in Dual mode with color matching.
-- **Visual Feedback**: Added a dynamic expanding ring (shockwave) on gravity flip.
-- **Velocity Tracker**: Added a reactive vector-based bar showing vertical velocity.
-- **New Visual Identity**: Replaced generic assets with custom, premium logos and icons.
-- **Settings Refinement**: Added controls for scale, displacement, and tracker toggles.
+## v1.2.0 (Bug Fix & Stability Update)
+- **Resolved CMake CI Error**: Explicitly provided $GEODE_SDK path for GitHub Actions.
+- **Improved Field Access**: Refactored `main.cpp` using static helpers for safer memory management.
+- **Color Compatibility**: Synchronized player color fetching with latest Geode SDK standards.
+- **Performance**: Optimized indicator updates and setting refresh logic.
 
 ## v1.0.0 (Elite Release)
 - **Initial Stable Release**: Finalized Elite Swing Indicator for Geometry Dash 2.2.
