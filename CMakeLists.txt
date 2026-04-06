@@ -12,7 +12,8 @@ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 # Allow CMake to find Geode SDK in CI/CD environments
 if (DEFINED ENV{GEODE_SDK})
-    list(APPEND CMAKE_MODULE_PATH "$ENV{GEODE_SDK}/cmake")
+    file(TO_CMAKE_PATH "$ENV{GEODE_SDK}" GEODE_SDK_CMAKE_PATH)
+    list(APPEND CMAKE_MODULE_PATH "${GEODE_SDK_CMAKE_PATH}/cmake")
 endif()
 
 project(EliteSwingIndicator VERSION 1.2.0)
